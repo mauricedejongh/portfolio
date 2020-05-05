@@ -1,2 +1,2 @@
 # portfolio
-Current portfolio website
+Current portfolio wordpress theme
