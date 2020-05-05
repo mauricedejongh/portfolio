@@ -1,0 +1,239 @@
+/*--------------------------------------------------------------
+3.0 layout
+--------------------------------------------------------------*/
+/*======== Main ========*/
+main {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*======== Canvas ========*/
+canvas {
+  position: relative;
+  z-index: 1;
+}
+
+/*======== Article ========*/
+article {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+article header {
+  margin: 0 0 100px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+}
+
+article .article-body {
+  width: 66%;
+  padding-right: 50px;
+}
+
+article aside {
+  width: 34%;
+  position: sticky;
+  top: 0;
+}
+
+article header .article-year {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+article header .article-title {
+  font-size: 50px;
+  margin: 10px 0 15px 0;
+}
+
+article header .article-site {
+  color: var(--color_blue_light);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.info-box ul li {
+  padding-left: 35px;
+  font-size: 19px;
+}
+
+.info-box ul li .fad {
+  top: 8px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    flex-direction: column;
+  }
+
+  article .article-body, article aside {
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  article header .article-title {
+    font-size: 28px;
+  }
+}
+
+/*======== Navigation menu ========*/
+#menu {
+  position: relative;
+  z-index: 6;
+}
+
+#menu-screen-left, #menu-screen-right {
+  position: fixed;
+  height: 100%;
+  width: 33vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in;
+  overflow: hidden;
+  transform: translateX(-34vw);
+  background: rgba(6,39,78,0.98);
+}
+
+#menu-screen-left {
+  left: 0;
+  background: rgba(3, 22, 45, 0.98);
+}
+
+#menu-screen-right {
+  right: 0px;
+  width: 67vw;
+  transform: translateX(67vw);
+}
+
+#icon-container {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#icon-container .fad {
+  font-size: 125px;
+  color: #91b7e4;
+  position: absolute;
+}
+
+#icon-container .fad:nth-child(1) {
+  transform: translateY(0px);
+  transition: 0.1s ease-in;
+}
+
+#icon-container .fad:nth-child(2) {
+  transform: translateY(-200px);
+  transition: 0.1s ease-in;
+}
+
+#icon-container .fad:nth-child(3) {
+  transform: translateY(-200px);
+  transition: 0.1s ease-in;
+}
+
+#icon-container .fad:nth-child(4) {
+  transform: translateY(-200px);
+  transition: 0.1s ease-in;
+}
+
+#menu-nav {
+  list-style-type: none;
+  text-align: left;
+  padding: 30px;
+  margin: 0;
+}
+
+#menu-nav li a {
+  color: var(--color_blue);
+  font-size: 30px;
+  display: block;
+  line-height: 100px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s ease-in;
+  left: 0px;
+}
+
+#burger-toggle {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
+#burger-toggle:hover {
+  top: 47px;
+  transition: var(--transition);
+}
+
+/*--- Active ---*/
+
+#menu.active #menu-screen-left {
+  transform: translateX(0vw);
+}
+
+#menu.active #menu-screen-right {
+  transform: translateX(0vw);
+}
+
+#menu.active #menu-nav li {
+  animation: fadeInRight 0.5s ease backwards;
+}
+
+#menu.active #menu-nav li:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+#menu.active #menu-nav li:nth-of-type(2) {
+  animation-delay: 0.3s;
+}
+
+#menu.active #menu-nav li:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/*--- Hover ---*/
+#menu-nav li a:hover {
+  color: var(--color_white);
+  left: -5px;
+}
+
+@media screen and (max-width: 1200px) {
+  #menu-nav li a {
+    font-size: 26px;
+    line-height: 90px;
+  }
+
+  #icon-container .fad {
+    font-size: 90px;
+  }
+}

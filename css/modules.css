@@ -1,0 +1,342 @@
+/*--------------------------------------------------------------
+4.0 Modules
+--------------------------------------------------------------*/
+/*======== Planets ========*/
+.planet-craters-half-home, .planet-mixed-home, .planet-saturn-home, .planet-rivers-about, .planet-craters-about, .planet-mixed-about, .planet-mixed-work, .planet-saturn-work, .planet-asteroids-work {
+  position: fixed;
+  z-index: 4;
+}
+
+.planet-craters-half-home{
+  bottom: 0;
+  left: 5%;
+  width: 60%;
+  filter: hue-rotate(223deg) saturate(0.8) brightness(90%);
+}
+
+.planet-saturn-home {
+	top: 40%;
+	right: 8%;
+	width: 8%;
+}
+
+.planet-mixed-home {
+  position: fixed;
+  z-index: 4;
+  top: 20%;
+  left: 10%;
+  width: 4%;
+}
+
+.planet-rivers-about {
+  top: 0%;
+  left: -15%;
+  width: 35%;
+}
+
+.planet-craters-about {
+  top: 30%;
+  right: 8%;
+  width: 2%;
+  filter: hue-rotate(3deg) saturate(1.4) brightness(70%);
+}
+
+.planet-mixed-about {
+  bottom: 3%;
+  right: 10%;
+  width: 7%;
+  filter: brightness(70%);
+}
+
+.planet-saturn-work {
+  top: 20%;
+	left: -8%;
+  width: 4%;
+  filter: brightness(40%);
+}
+
+.planet-mixed-work {
+  top: -90%;
+  right: -54%;
+  width: 85%;
+}
+
+.planet-asteroids-work {
+  top: 20%;
+  left: -5%;
+  width: 15%;
+  filter: hue-rotate(-1deg) saturate(1.4) brightness(65%);
+}
+
+/*======== Comet ========*/
+#comet {
+	position: absolute;
+  left: 40%;
+  bottom: 8%;
+  padding: 15px;
+  color: white;
+  border-right: 3px solid;
+  border-image:
+    linear-gradient(
+      to bottom,
+      rgba(104, 147, 197, 1),
+      rgba(0, 5, 13, 0)
+    ) 1 100%;
+	transform: translate(42px, 39px) rotate(40deg);
+	animation:linear infinite;
+	animation-name: fly;
+	animation-duration: 15s;
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+@keyframes fly {
+    from { opacity: 1; left: -10%; bottom: 8%;}
+    100%  { left: 700%; bottom: 1000%; }
+}
+
+/*======== Buttons ========*/
+.btn-container {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.btn-container .btn:nth-child(1), .btn-container .btn:nth-child(2) {
+  margin: 0 10px;
+}
+
+.btn {
+  position: relative;
+  top: 0;
+  margin: 0;
+  color: var(--color_white);
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 30px;
+  display: inline-block;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.btn:hover {
+  top: -3px;
+  color: var(--color_blue);
+  border: 2px solid var(--color_blue);
+}
+
+.btn p:nth-child(1) {
+  position: relative;
+  margin: 0;
+  transition: 0.2s ease-in;
+}
+
+.btn:hover p:nth-child(1) {
+  transform: translateY(50px);
+}
+
+/*======== Intro ========*/
+.intro {
+  align-items: center;
+}
+
+.intro h1 {
+  font-size: 65px;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+
+.intro h3 {
+  font-size: 28px;
+  margin: 0 0 50px 0;
+}
+
+/*======== Info box ========*/
+.info-box {
+  width: 100%;
+  background: rgba(6,39,78,0.5);
+  border-top: 3px solid var(--color_blue);
+  padding: 30px 40px;
+  text-align: left;
+}
+
+.info-box ul {
+  list-style-type: none;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+
+.info-box ul li {
+  position: relative;
+  padding-left: 32px;
+  font-family: 'Roboto';
+  font-size: 19px;
+  line-height: 34px;
+  color: var(--color_blue_light);
+}
+
+.info-box ul li .fad {
+  font-size: 17px;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+
+.info-box ul li strong {
+  color: var(--color_white);
+  font-weight: 600;
+}
+
+/*======== Image box ========*/
+.image-box {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  transition: var(--transition);
+}
+
+.image-box:hover {
+  top: -5px;
+}
+
+.image-box img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.floatAway {
+  animation: floatAway 30s forwards;
+}
+
+.floatBack {
+  animation: floatBack 3s ease;
+}
+
+/*======== Astronaut ========*/
+@keyframes floatAway {
+  0% {
+    transform: translateX(0px) scale(1) rotate(0deg);
+  }
+  100% {
+    transform: translateX(500px) scale(0) rotate(135deg);
+  }
+}
+
+@keyframes floatBack {
+  0% {
+    transform: translateY(-500px) scale(1);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/*======== Page overlays ========*/
+.bottom-overlay-gradient, .top-overlay-gradient {
+  position: fixed;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(to top, rgba(0,5,13,0.75), rgba(0,5,13,0));
+}
+
+.top-overlay-gradient {
+  bottom: inherit;
+  top: 0;
+  background-image: linear-gradient(to bottom, rgba(0,5,13,0.75), rgba(0,5,13,0));
+}
+
+
+/*======== Media queries ========*/
+@media screen and (max-width: 1024px) {
+  #comet {
+  	display: none;
+    animation: none;
+  }
+
+  .planet-craters-half-home{
+    left: 15%;
+    width: 70%;
+  }
+
+  .planet-saturn-home {
+  	top: 40%;
+  	right: 8%;
+  	width: 12%;
+  }
+
+  .planet-mixed-home {
+    top: 20%;
+    left: 10%;
+    width: 7%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .planet-craters-half-home{
+    left: 5%;
+    width: 90%;
+  }
+
+  .planet-saturn-home {
+    top: 40%;
+    right: 8%;
+    width: 16%;
+  }
+
+  .planet-mixed-home {
+    top: 20%;
+    left: 10%;
+    width: 10%;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+
+.planet-rivers-about {
+  top: 0%;
+  left: -15%;
+  width: 35%;
+}
+
+.planet-craters-about {
+  top: 30%;
+  right: 8%;
+  width: 2%;
+  filter: hue-rotate(3deg) saturate(1.4) brightness(70%);
+}
+
+.planet-mixed-about {
+  bottom: 3%;
+  right: 10%;
+  width: 7%;
+  filter: brightness(70%);
+}
+
+.planet-saturn-work {
+  top: 20%;
+	left: -8%;
+  width: 4%;
+  filter: brightness(40%);
+}
+
+.planet-mixed-work {
+  top: -90%;
+  right: -54%;
+  width: 85%;
+}
+
+.planet-asteroids-work {
+  top: 20%;
+  left: -5%;
+  width: 15%;
+  filter: hue-rotate(-1deg) saturate(1.4) brightness(65%);
+}

@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: var(--color_white);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+q,
+blockquote {
+  quotes: "“" "”" "‘" "’";
+  color: var(--color_blue_light);
+  font-size: 24px;
+  margin: 10px 0 50px 0;
+}
+
+.french {
+  quotes: "«" "»" "‹" "›";
+}
+
+q:before,
+blockquote:before {
+  content: open-quote;
+}
+
+q:after,
+blockquote:after {
+  content: close-quote;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  color: var(--color_white);
+  font-size: 1.2em;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 5px solid var(--color_white);
+}
+
+/*===== Buttons & links =====*/
+.btn-container {
+  margin: 50px 0;
+}
+
+.btn-container .btn:nth-child(1), .btn-container .btn:nth-child(2) {
+  margin: 0 10px;
+}
+
+.btn {
+  position: relative;
+  top: 0;
+  color: var(--color_white);
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 30px;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  top: -3px;
+  color: var(--color_blue);
+  border: 2px solid var(--color_blue);
+}
+
+/*===== Scrolbar =====*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #010911;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #051e37;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0a2e53;
+}

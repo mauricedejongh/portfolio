@@ -1,0 +1,96 @@
+#interface {
+  position: absolute;
+  z-index: 7;
+}
+
+#volume {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 4;
+  cursor: pointer;
+  color: var(--color_blue);
+  font-size: 30px;
+  transition: var(--transition);
+}
+
+#volume:hover, #arrow-up:hover, #arrow-down:hover  {
+  color: var(--color_white);
+  opacity: 1;
+  bottom: 53px;
+}
+
+#arrow-up:hover:after {
+  opacity: 1;
+}
+
+#volume .fa:nth-child(2) {
+  display: none;
+}
+
+/*======== Logo ========*/
+.logo {
+  position: fixed;
+  z-index: 2;
+  top: 40px;
+  left: 50px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color_white);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo img {
+    width: 35px;
+    padding: 6px;
+    float: left;
+    position: relative;
+    top: -6px;
+    margin-right: 7px;
+    border-radius: 50px;
+    background: linear-gradient(-90deg, rgb(95, 129, 191) 0%, rgba(38,72,110,1) 50%, rgba(3,10,25,1) 100%);
+}
+
+.logo:hover {
+  top: 37px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    top: 30px;
+    left: 30px;
+  }
+
+  .logo:hover {
+    top: 27px;
+  }
+
+  #volume {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  #volume:hover {
+    bottom: 33px;
+  }
+
+  #burger-toggle {
+    top: 30px;
+    right: 30px;
+  }
+
+  #burger-toggle:hover {
+    top: 27px;
+  }
+
+  #menu-nav li a {
+    font-size: 20px;
+    line-height: 60px;
+  }
+
+  #icon-container .fad {
+    font-size: 60px;
+  }
+
+}

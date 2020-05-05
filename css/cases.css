@@ -1,0 +1,45 @@
+.case header {
+  margin: 0 0 100px 0;
+}
+
+.case header .case-year {
+  font-weight: 700;
+  margin: 0;
+}
+
+.case header .case-title {
+  font-size: 50px;
+  margin: 10px 0 15px 0;
+}
+
+.case header .case-site {
+  color: var(--color_blue_light);
+  font-weight: 700;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.case article {
+  display: flex;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.case article .case-description {
+  width: 62%;
+  padding-right: 25px;
+}
+
+.case article aside {
+  width: 38%;
+}
+
+.case ul li {
+  padding-left: 35px;
+  font-size: 19px;
+}
+
+.case ul li .fad {
+  top: 8px;
+  font-size: 20px;
+}

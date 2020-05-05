@@ -1,0 +1,18 @@
+Future improvements
+=========================
+- https://css-tricks.com/page-transitions-for-everyone/ About page transitions
+- https://swup.js.org/getting-started/how-it-works SWUP
+
+- We need to make the site behave like a Single Page Application (SPA).
+https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
+
+- For better url's, we can use PJAX navigation. Or the new Fetch API...?
+
+- Loading screen:
+https://blog.hellojs.org/create-a-very-basic-loading-screen-using-only-javascript-css-3cf099c48b19
+With solar system animation while loading: https://codepen.io/AlexWarnes/pen/jXYYKL
+
+- Arrow navigation side for work. No overzicht page, just detail slides with different color backgrounds.
+https://kyledecker.me/work/wintr-mx
+
+- Overflow scroll to work content, with the bottom slidely faded out

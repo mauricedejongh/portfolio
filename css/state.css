@@ -1,0 +1,48 @@
+/*--------------------------------------------------------------
+5.0 State
+--------------------------------------------------------------*/
+/*======== Page transitions ========*/
+.transition-fade {
+  transition: 0.7s;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+  transform: translateY(100px);
+  transition-timing-function: ease-out;
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition-timing-function: ease-in;
+}
+
+.transition-fade#astronaut { transition-delay: 0.25s; }
+
+.transition-fade.article-year { transition-delay: 0s; }
+.transition-fade.article-title { transition-delay: 0.15s; }
+.transition-fade.article-site { transition-delay: 0.25s; }
+.transition-fade.article-body { transition-delay: 0.35s; }
+aside.transition-fade { transition-delay: 0.45s; }
+
+
+.transition-scale {
+  transition: 0.7s;
+  opacity: 1;
+  transform: scale(1) translateY(0px);
+}
+
+html.is-animating .transition-scale {
+  opacity: 0;
+  transform: scale(0) translateY(500px);
+  transition-timing-function: ease-out;
+}
+
+html.is-leaving .transition-scale {
+  opacity: 0;
+  transform: scale(0) translateY(500px);
+  transition-timing-function: ease-in;
+}

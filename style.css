@@ -1,0 +1,49 @@
+/*
+Author: Maurice de Jongh
+Author URI: http://mauricedejongh.nl
+Styleguide: Similar to Smacss
+Style goals: Increase semantics and decrease reliance on specific HTML structure.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# 1.0 Variables (reusable styles)
+# 2.0 Base (base styling & reset)
+# 3.0 Layout (major components)
+  ## 3.1 Header
+  ## 3.2 Footer
+  ## 3.3 Sidebar
+  ## 3.4 Navigation
+  ## 3.5 Article
+# 4.0 Modules (minor components)
+# 5.0 State (indicates a javaScript dependency)
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Variables
+--------------------------------------------------------------*/
+@import "css/variables.css";
+
+/*--------------------------------------------------------------
+2.0 Base
+--------------------------------------------------------------*/
+@import "css/base.css";
+
+/*--------------------------------------------------------------
+3.0 Layout
+--------------------------------------------------------------*/
+@import "css/layout.css";
+@import "css/content.css"; /* Temporary */
+@import "css/interface.css"; /* Temporary */
+@import "css/burger-icon.css"; /* Temporary */
+
+/*--------------------------------------------------------------
+4.0 Modules
+--------------------------------------------------------------*/
+@import "css/modules.css";
+
+/*--------------------------------------------------------------
+5.0 State
+--------------------------------------------------------------*/
+@import "css/state.css";

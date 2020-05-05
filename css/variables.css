@@ -1,0 +1,7 @@
+:root {
+  --color_white: #fff;
+  --color_blue: #8fb3e4;
+  --color_blue_light: #b3cdf0;
+
+  --transition: 0.1s ease-in;
+}
